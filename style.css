@@ -40,6 +40,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-family: 'Special Elite', cursive;
+    color: black;
 }
 .header li a:hover {
     background-color: rgb(65, 122, 168);
@@ -56,5 +57,65 @@ body {
 }
 .aboutSection {
     height: 500px;
-    background-color: lightsalmon;
+    padding: 40px 100px;
+    background-color: rgb(127, 193, 212);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.5px;
 }
+.profilePic img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+.aboutMeSummary {
+    width: 400px;
+    margin-left: 50px;
+    font-family: 'Special Elite', cursive;
+    line-height: 20px;
+}
+.aboutMeSummary:hover {
+    transform: scale(1.2);
+    transition: ease-in .5s;
+}
+.portfolioSection {
+    background-color:rgb(127, 193, 212);
+    height: 800px;
+    border-radius: 1.5px;
+}
+.portfolioSection p {
+    margin: 0px;
+    padding: 40px;
+    font-size: 40px;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+}
+.portfolioBody {
+    display: flex;
+    justify-content: center;
+}
+.portfolioContainer {
+    width: 700px;
+    height: 580px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+}
+.portfolioContainer img{
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+}
+.portfolioContainer img:hover {
+    box-shadow: 3px 3px 20px grey;
+}
+/* .port1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} */
