@@ -1,99 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/fonts/Kano/Kano regular.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js"></script> -->
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header" id="myheader" onmouseover="linkChange">
-            <img src="/images/logo_black.png" alt="Personal Logo">
-            <p>Jason McGee</p>
-            <ul>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Resume</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Home</a></li>
-            </ul>
+      <div class="navbar" id="myNavbar">
+        <div class="content">
+          <div class="logo-container">
+            <img src="/images/logo_black.png" alt="Personal Logo" />
+          </div>
+          <span>JASON McGEE</span>
+          <ul>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Resume</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Home</a></li>
+          </ul>
         </div>
-        <div class="body">
-            <div class="fixedPic">
-                <div class="handstand"></div>
+      </div>
+      <div class="body">
+        <div class="fixedPic">
+          <div class="handstand"></div>
+        </div>
+        <div class="aboutSection">
+          <div class="profilePic">
+            <img
+              src="/images/myProfilePicCropped.jpg"
+              alt="Profile picture of me and my son"
+            />
+          </div>
+          <div class="aboutMeSummary">
+            <p>
+              A little about me. I come from a military background that
+              empressed on me many of my beliefs and fundementals that follow me
+              today. I’ve been in the automation industry for almost a decade
+              until I decided it wasn’t right for me and, more importantly, not
+              how I wanted to spend my time. Fast forward to now. I am a full
+              stack developer that aims to be a part of something meaningful and
+              outrageous. That feeling of accomplishment and being part of a
+              team are things that make me feel right at home. Not only that,
+              but they make me want more. Coding is a special world…and it needs
+              someone like me to do it.
+            </p>
+          </div>
+        </div>
+        <div class="portfolioSection">
+          <p>My Work</p>
+          <div class="portfolioBody">
+            <div class="portfolioContainer">
+              <img
+                src="/images/ZizurzSite.png"
+                alt="Zizurz Site"
+                class="port1"
+              />
+              <img
+                src="/images/TicTacToe.png"
+                alt="TicTacToe Site"
+                class="port2"
+              />
+              <img src="/images/OurSite.png" alt="OurSite" class="port3" />
+              <img
+                src="/images/imageGallery.png"
+                alt="Image Gallery"
+                class="port4"
+              />
             </div>
-            <div class="aboutSection">
-                <div class="profilePic">
-                    <img src="/images/myProfilePicCropped.jpg" alt="Profile picture of me and my son">
-                </div>
-                <div class="aboutMeSummary">
-                    <p>A little about me.  I come from a military background that empressed 
-                        on me many of  my beliefs and fundementals that follow me today.  I’ve 
-                        been in the automation industry for almost a decade until I decided it 
-                        wasn’t right for me and, more importantly, not how I wanted to spend
-                        my time.  Fast forward to now.  I am a full stack developer that aims 
-                        to be a part of something meaningful and outrageous.  That feeling of 
-                        accomplishment and being part of a team are things that make me feel 
-                        right at home.  Not only that, but they make me want more.  Coding is 
-                        a special world…and it needs someone like me to do it.
-                    </p>
-                </div>
-            </div>
-            <div class="portfolioSection">
-                <p>My Work</p>
-                <div class="portfolioBody">
-                    <div class="portfolioContainer">
-                        <img src="/images/ZizurzSite.png" alt="Zizurz Site" class="port1">
-                        <img src="/images/TicTacToe.png" alt="TicTacToe Site" class="port2">
-                        <img src="/images/OurSite.png" alt="OurSite" class="port3">
-                        <img src="/images/imageGallery.png" alt="Image Gallery" class="port4">
-                    </div>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="containerTimeline left">
-                  <div class="content">
-                    <h2>2017</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
-                <div class="containerTimeline right">
-                  <div class="content">
-                    <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
-                <div class="containerTimeline left">
-                  <div class="content">
-                    <h2>2015</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
-                <div class="containerTimeline right">
-                  <div class="content">
-                    <h2>2012</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
-                <div class="containerTimeline left">
-                  <div class="content">
-                    <h2>2011</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
-                <div class="containerTimeline right">
-                  <div class="content">
-                    <h2>2007</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="resumeSection">
+          <div class="timeline">
+            <div class="containerTimeline left">
+              <div class="content">
+                <h2>2017</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
               </div>
-
+            </div>
+            <div class="containerTimeline right">
+              <div class="content">
+                <h2>2016</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
+              </div>
+            </div>
+            <div class="containerTimeline left">
+              <div class="content">
+                <h2>2015</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
+              </div>
+            </div>
+            <div class="containerTimeline right">
+              <div class="content">
+                <h2>2012</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
+              </div>
+            </div>
+            <div class="containerTimeline left">
+              <div class="content">
+                <h2>2011</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
+              </div>
+            </div>
+            <div class="containerTimeline right">
+              <div class="content">
+                <h2>2007</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+                  admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+                  quis iuvaret expetendis his, te elit voluptua dignissim per,
+                  habeo iusto primis ea eam.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

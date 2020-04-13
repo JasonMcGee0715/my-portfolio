@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Kano regular';
+    src: url('Kano.eot');
+    src: url('Kano.eot?#iefix') format('embedded-opentype'),
+         url('Kano.woff2') format('woff2'),
+         url('Kano.woff') format('woff'),
+         url('Kano.ttf')  format('truetype'),
+         url('Kano.svg#Kano regular') format('svg');
+}
