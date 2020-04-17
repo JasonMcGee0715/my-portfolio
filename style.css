@@ -53,7 +53,7 @@ body {
   color: lightgray;
 }
 
-.body {
+/* .body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
@@ -63,9 +63,9 @@ body {
   display: none;
 }
 
-.fixedPic, .aboutSection, .portfolioSection, .resumeSection, .contactMe {
+.fixedPic, .sectionHeaderA, .sectionHeaderB {
   scroll-snap-align: start;
-}
+} */
 
 .fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
@@ -79,8 +79,8 @@ body {
   max-width: 1200px;
 }
 .aboutSection {
-  height: 100vh;
-  padding: 40px 100px;
+  height: 80vh;
+  padding: 0px 100px;
   background-color: rgba(255, 255, 255, .9);
   display: flex;
   justify-content: space-evenly;
@@ -110,7 +110,7 @@ body {
   border-radius: 1.5px;
   padding-bottom: 100px;
 }
-.sectionHeader {
+.sectionHeaderA {
   height: 100px;
   width: 100%;
   padding: 100px 0px 0px 0px;
@@ -120,7 +120,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-color: rgba(255, 255, 255, .9);
+}
+.sectionHeaderB {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  font-size: 40px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionHeaderC {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  font-size: 40px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .portfolioSection p {
   margin: 0;
