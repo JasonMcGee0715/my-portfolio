@@ -253,7 +253,26 @@ body {
 .contactFormContainer {
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
+  padding-left: 80px;
+}
+.nameEmail {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 40px 0px 0px;
+}
+.footer {
+  min-width: 1200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7px) brightness(1.2);
+  border-radius: 1.5px;
+}
+.socialContainer img {
+  width: 50px;
+  padding: 20px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
