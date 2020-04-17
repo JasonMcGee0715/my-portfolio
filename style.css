@@ -52,6 +52,7 @@ body {
   border-radius: 20px;
   color: lightgray;
 }
+
 .fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
   height: 100vh;
@@ -141,17 +142,19 @@ body {
 
 /* Container around content */
 .containerTimeline {
+  position: relative;
   display: grid;
   justify-content: center;
-  grid-template-rows: 100px repeat(4, 1fr) 100px;
+  grid-template-rows: 100px 100px repeat(4, 1fr) 100px;
+  grid-template-columns: 100%;
   height: 100%;
   width: 80%;
 }
 
 .containerTimeline .line {
-  grid-row: 2/6;
+  grid-row: 3/7;
   grid-column: 1;
-  transform: translateX(-2.5px);
+  /* transform: translateX(-2.5px); */
   border-right: dotted 5px #ff9f55;
   height: 100%;
   margin: auto;
@@ -159,19 +162,34 @@ body {
 
 /* The actual content */
 .containerTimeline .content {
-  grid-row: 2/6;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row: 3/7;
   grid-column: 1;
+  height: 100%;
+  width: 100%;
   position: relative;
   border-radius: 6px;
   font-family: 'Special Elite', cursive;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
 }
 
-.containerTimeline .content .position {
-  grid-row: 1;
+.containerTimeline .content .position.right, 
+.containerTimeline .content .position.left {
+  grid-row: auto;
   display: grid;
-  grid-template-columns: 1fr 10px 1fr;
+  grid-template-columns: 1fr 30px 1fr;
+}
+
+.containerTimeline .content .position.right .date,
+.containerTimeline .content .position.left .description {
+  grid-column: 1;
+}
+.containerTimeline .content .position.left .date,
+.containerTimeline .content .position.right .description {
+  grid-column: 3;
+}
+
+.containerTimeline .content .description {
 }
 
 .contactMe {
@@ -189,24 +207,6 @@ body {
   padding-top: 0px;
   padding-bottom: 80px;
   font-size: 40px;
-}
-.contactContainer {
-  width: 700px;
-  height: 400px;
-  background-color: rgb(238, 238, 238);
-  align-self: center;
-  border-radius: 3px;
-  box-shadow: rgb(207, 207, 207) 2px 2px 50px 8px;
-}
-.contactContainer p {
-  font-size: 20px;
-  padding: 30px 40px;
-  line-height: 1.2;
-}
-.contactFormContainer {
-  display: flex;
-  flex-direction: column;
-  padding-left: 40px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
