@@ -22,27 +22,29 @@
         <ul>
           <li><a href="">Contact</a></li>
           <li><a href="">Resume</a></li>
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Home</a></li>
+          <li><a href="#portfolioSection">Portfolio</a></li>
+          <li><a href="#aboutContainer">About</a></li>
+          <li><a href="#fixedPic">Home</a></li>
         </ul>
       </div>
       <div class="body">
-        <div class="fixedPic">
+        <div id="fixedPic">
           <div class="handstand"></div>
         </div>
-        <div class="sectionHeaderA">
-          <p>About Me</p>
-        </div>
-        <div class="aboutSection">
-          <div class="profilePic">
-            <img
+        
+        <div id="aboutContainer">
+          <div class="headerAbout">
+            <p>About Me</p>
+          </div>
+          <div class="aboutSection">
+            <div class="profilePic">
+              <img
               src="/images/myProfilePicCropped.jpg"
               alt="Profile picture of me and my son"
-            />
-          </div>
-          <div class="aboutMeSummary">
-            <p>
+              />
+            </div>
+            <div class="aboutMeSummary">
+              <p>
               A little about me. I come from a military background that
               empressed on me many of my beliefs and fundementals that follow me
               today. I’ve been in the automation industry for almost a decade
@@ -53,10 +55,11 @@
               team are things that make me feel right at home. Not only that,
               but they make me want more. Coding is a special world…and it needs
               someone like me to do it.
-            </p>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="portfolioSection">
+        <div id="portfolioSection">
           <div class="sectionHeaderB">
             <p>My Work</p>
           </div>
@@ -98,10 +101,10 @@
             </div>
           </div>
         </div>
-        <div class="sectionHeaderC">
-          <p>Get in Touch</p>
-        </div>
         <div class="contactMe">
+          <div class="headerContact">
+            <p>Get in Touch</p>
+          </div>
           <div class="contactContainer">
             <p>
               Howdy Folks! If you want to reach me for questions, work, or
@@ -120,11 +123,12 @@
                 </div>
               </div>
                 <label for="message">Message:</label>
-                <textarea
+                <textarea class="textArea"
                   name="message"
                   id="message"
                   cols="20"
-                  rows="5"
+                  rows="10"
+                  placeholder="Let me know if you have something on you mind or if you're looking to work together."
                 ></textarea>
               </div>
             </div>
