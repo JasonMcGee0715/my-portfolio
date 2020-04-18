@@ -61,7 +61,21 @@ body {
   color: lightgray;
 }
 
-.fixedPic {
+/* .body {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.fixedPic, .sectionHeaderA, .sectionHeaderB {
+  scroll-snap-align: start;
+} */
+
+#fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
   height: 100vh;
   background-repeat: no-repeat;
@@ -72,14 +86,34 @@ body {
   width: 100%;
   max-width: 1200px;
 }
-.aboutSection {
+
+#aboutContainer {
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 1.5px;
   height: 100vh;
-  padding: 40px 100px;
-  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headerAbout {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  font-size: 40px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutSection {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 1.5px;
+  height: 80vh;
+  padding: 80px 100px;
+  
 }
 .profilePic img {
   max-width: 400px;
@@ -98,17 +132,46 @@ body {
 .aboutMeSummary:hover {
   transform: scale(1.2);
 }
-.portfolioSection {
+#portfolioSection {
   background-color: rgba(255, 255, 255, 0.8);
-  height: 800px;
+  height: auto;
   border-radius: 1.5px;
+  padding-bottom: 100px;
 }
-.portfolioSection p {
-  margin: 0px;
-  padding: 40px;
+.sectionHeaderA {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
   font-size: 40px;
   font-family: 'Special Elite', cursive;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .9);
+}
+.sectionHeaderB {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  font-size: 40px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionHeaderC {
+  
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.portfolioSection p {
+  margin: 0;
 }
 .portfolioBody {
   display: flex;
@@ -280,23 +343,83 @@ body {
 
 .contactMe {
   width: inherit;
-  height: 800px;
+  height: auto;
+  padding-bottom: 100px;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Special Elite', cursive;
 }
-.contactMe p {
+/* .contactMe p {
   text-align: center;
   font-family: 'Special Elite', cursive;
   margin: 0;
   padding-top: 0px;
   padding-bottom: 80px;
   font-size: 40px;
+} */
+.headerContact {
+  height: 100px;
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  font-size: 40px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerContact p {
+  margin-top: 0;
+  padding-top: 100px;
+}
+.contactContainer {
+  width: 700px;
+  height: 400px;
+  background-color: rgb(238, 238, 238);
+  align-self: center;
+  border-radius: 3px;
+  box-shadow: rgb(207, 207, 207) 2px 2px 50px 8px;
+  margin-top: 60px;
+}
+.contactContainer p {
+  font-size: 20px;
+  padding: 30px 40px;
+  padding-bottom: 0;
+  line-height: 1.2;
+}
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 80px;
+}
+.nameEmail {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 40px 20px 0px;
+}
+.footer {
+  min-width: 1200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(7px) brightness(1.2);
+  border-radius: 1.5px;
+}
+.socialContainer img {
+  width: 50px;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) { */
   /* Place the timelime to the left */
   /* .timeline::after {
     left: 31px;
@@ -310,12 +433,12 @@ body {
     } */
 
   /* Make sure that all arrows are pointing leftwards */
-  .containerTimeline::before {
+  /* .containerTimeline::before {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
-  }
+  } */
 
   /* Make sure all circles are at the same spot */
   /* .left::after, .right::after {
