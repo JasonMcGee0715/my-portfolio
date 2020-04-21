@@ -1,21 +1,41 @@
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   background-color: rgb(65, 122, 168);
   margin-top: 0;
 }
 .pageloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  z-index: 5;
-  width: 100%;
+  z-index: -1;
+  width: 100vw;
   height: 100vh;
+  visibility: visible;
+  transition: all 0.1s linear 0.5s;
+}
+.loader {
+  width: 25%;
+  height: auto;
 }
 .container {
-  opacity: 1;
+  opacity: 0;
   width: 1200px;
+  pointer-events: none;
   height: auto;
   margin: auto;
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2);
-  transition: all .5s;
+  transition: all 0.5s ease-out 0.1s;
+  overflow-y: scroll;
+  overflow-y: unset;
+}
+.container.visible {
+  pointer-events: all;
+  opacity: 1;
 }
 .header {
   min-width: 1200px;
@@ -61,7 +81,14 @@ body {
   color: lightgray;
 }
 
-/* .body {
+.underscore {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  bottom: 0;
+}
+
+.body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
@@ -71,9 +98,12 @@ body {
   display: none;
 }
 
-.fixedPic, .sectionHeaderA, .sectionHeaderB {
+#fixedPic,
+#aboutContainer,
+#portfolioSection,
+#contactMe {
   scroll-snap-align: start;
-} */
+}
 
 #fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
@@ -88,7 +118,7 @@ body {
 }
 
 #aboutContainer {
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1.5px;
   height: 100vh;
   padding: 0px 100px;
@@ -104,6 +134,7 @@ body {
   font-family: 'Special Elite', cursive;
   text-align: center;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
 }
@@ -113,7 +144,6 @@ body {
   align-items: center;
   height: 80vh;
   padding: 80px 100px;
-  
 }
 .profilePic img {
   max-width: 400px;
@@ -148,9 +178,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .sectionHeaderB {
+  position: relative;
   height: 100px;
   width: 100%;
   padding: 100px 0px 0px 0px;
@@ -162,7 +193,6 @@ body {
   justify-content: center;
 }
 .sectionHeaderC {
-  
   font-family: 'Special Elite', cursive;
   text-align: center;
   display: flex;
@@ -176,11 +206,17 @@ body {
   font-family: 'Special Elite', cursive;
   text-align: center;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   height: 100px;
+  margin-bottom: 50px;
   width: 100%;
 }
+.resume-header p {
+  margin: 0;
+}
+
 .portfolioSection p {
   margin: 0;
 }
@@ -211,7 +247,7 @@ body {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.15);
 }
 
-.resumeSection {
+#resumeSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,27 +265,49 @@ body {
   display: grid;
   justify-content: center;
   align-items: flex-start;
-  grid-template-rows: 100px 100px repeat(4, 1fr) 100px;
+  grid-template-rows: 100px auto 100px repeat(4, 1fr) 100px;
   grid-template-columns: 100%;
   height: 100%;
   width: 80%;
 }
 
-.containerTimeline .line {
-  grid-row: 3/7;
-  grid-column: 1;
-  transform: translateY(18px);
+.containerTimeline .button {
+  grid-row: 3;
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  border: solid 2.5px #ff9f55;
+  display: flex;
+  color: #000000;
+  font-family: 'Special Elite', Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto 40px auto;
+}
+.containerTimeline .button svg {
+  width: auto;
+  height: 15px;
+  fill: #ff9f55;
+  margin-left: 15px;
+}
+.containerTimeline .button span {
+  transform: translateY(1px);
+}
+
+.position .line {
   border-right: dotted 5px #ff9f55;
   height: 100%;
-  margin: auto;
+  left: calc(50% - 2.5px);
+  top: 38px;
+  position: absolute;
 }
 
 /* The actual content */
 .containerTimeline .content {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  row-gap: 20px;
-  grid-row: 3/7;
+  row-gap: 24px;
+  grid-row: 4/8;
   grid-column: 1;
   height: 100%;
   width: 100%;
@@ -260,6 +318,7 @@ body {
 
 .containerTimeline .content .position.right,
 .containerTimeline .content .position.left {
+  position: relative;
   grid-row: auto;
   display: grid;
   grid-template-columns: 1fr 30px 1fr;
@@ -271,6 +330,12 @@ body {
   height: 15px;
   border-radius: 50%;
   background-color: #ff9f55;
+  transform: scale(1);
+  transition: all 0.25s;
+}
+
+.containerTimeline .content .position:hover .indicator {
+  transform: scale(1.25);
 }
 
 .containerTimeline .content .position.right .date,
@@ -297,6 +362,7 @@ body {
   height: fit-content;
   display: flex;
   overflow-x: hidden;
+  overflow-y: visible;
   opacity: 0;
   transition: transform 0.5s ease-out 0s, opacity 0.35s ease-out 0.15s;
   pointer-events: none;
@@ -309,7 +375,7 @@ body {
 
 .containerTimeline .content .description {
   position: relative;
-  margin: 0px 20px;
+  margin: 0px 20px 20px 20px;
   background: #ffffff;
   border-radius: 5px;
   width: 75%;
@@ -359,12 +425,10 @@ body {
 
 .contactMe {
   width: inherit;
-  height: auto;
-  padding-bottom: 100px;
+  height: calc(100vh - 100px);
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: 'Special Elite', cursive;
 }
 /* .contactMe p {
@@ -383,13 +447,22 @@ body {
   font-family: 'Special Elite', cursive;
   text-align: center;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
 }
 .headerContact p {
-  margin-top: 0;
-  padding-top: 100px;
+  margin: 0;
 }
+
+.flex-wrapper {
+  position: relative;
+  height: calc(100vh - 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactContainer {
   width: 700px;
   height: 400px;
@@ -397,7 +470,6 @@ body {
   align-self: center;
   border-radius: 3px;
   box-shadow: rgb(207, 207, 207) 2px 2px 50px 8px;
-  margin-top: 60px;
 }
 .contactContainer p {
   font-size: 20px;
@@ -431,38 +503,36 @@ body {
 }
 
 @media (max-width: 480px) {
-  
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 /* @media screen and (max-width: 600px) { */
-  /* Place the timelime to the left */
-  /* .timeline::after {
+/* Place the timelime to the left */
+/* .timeline::after {
     left: 31px;
     } */
 
-  /* Full-width containers */
-  /* .containerTimeline {
+/* Full-width containers */
+/* .containerTimeline {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
     } */
 
-  /* Make sure that all arrows are pointing leftwards */
-  /* .containerTimeline::before {
+/* Make sure that all arrows are pointing leftwards */
+/* .containerTimeline::before {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   } */
 
-  /* Make sure all circles are at the same spot */
-  /* .left::after, .right::after {
+/* Make sure all circles are at the same spot */
+/* .left::after, .right::after {
     left: 15px;
     } */
 
-  /* Make all right containers behave like the left ones */
-  /* .right {
+/* Make all right containers behave like the left ones */
+/* .right {
     left: 0%;
     } */
-}

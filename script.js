@@ -13,15 +13,28 @@
 
 function preloader() {
   let pageloader = document.querySelector('.pageloader')
-  pageloader.style.opacity = '0'
-  preloader.setAttribute('aria-busy', 'false')
-  document.getElementById('site').style.opacity = '1'
+  pageloader.style.visibility = 'hidden'
+  pageloader.setAttribute('aria-busy', 'false')
+  document.querySelector('.container').classList.add('visible')
+  // document.querySelector('html').style.setProperty('overflow', 'auto')
 }
 window.addEventListener('load', function(e) {
-    setTimeout(preloader(), 1500)
+    setTimeout(preloader, 2000)
     setTimeout(function() {
         // let document.querySelector('.')
     }, 500)
 })
+
+const LottieAnimations = {
+  loader: lottie.loadAnimation({
+    container: document.querySelector('.loader'),
+    isFrame: true,
+    autoplay: true,
+    loop: false,
+    renderer: 'svg',
+    preserveAspectRatio: 'xMidYMid meet',
+    path: 'js/logo_anim.json',
+  }),
+}
 
 
