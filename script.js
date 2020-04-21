@@ -12,10 +12,10 @@
 //   }
 
 let mainNavLinks = document.querySelectorAll("#myheader ul li a");
-let mainSections = document.querySelectorAll("#fixedPix", "#aboutContainer", "#portfolioSection", "#resumeSection", "#contactMe");
+let mainSections = document.querySelectorAll('.section');
 let mainBody = document.querySelector('.body')
-let lastId;
-let cur = [];
+let fromTop = mainBody.scrollTop;
+let links = mainNavLinks.childNodes
 
 function preloader() {
   let pageloader = document.querySelector('.pageloader')
@@ -43,19 +43,17 @@ const LottieAnimations = {
   }),
 }
 
-window.addEventListener("scroll", event => {
-  let fromTop = mainBody.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-
+mainBody.addEventListener("scroll", function() {
+  fromTop = mainBody.scrollTop;
+  mainNavLinks.forEach(function(currentValue, currentIndex) {
+    let section = mainSections[currentIndex];
     if (
       section.offsetTop <= fromTop &&
       section.offsetTop + section.offsetHeight > fromTop
     ) {
-      link.classList.add("current");
+      currentValue.classList.add("current");
     } else {
-      link.classList.remove("current");
+      currentValue.classList.remove("current");
     }
   });
 });

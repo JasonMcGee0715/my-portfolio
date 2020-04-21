@@ -59,6 +59,8 @@ body {
   font-family: 'Special Elite', cursive;
 }
 .header ul {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   position: absolute;
   margin: 0;
@@ -80,11 +82,12 @@ body {
 }
 .header li a:hover {
   background-color: rgba(65, 122, 168, 1);
-  color: lightgray;
+  color: #fff;
 }
 
 .header li a.current {
   background-color: rgba(65, 122, 168, 1);
+  color: #fff;
 }
 
 .underscore {
