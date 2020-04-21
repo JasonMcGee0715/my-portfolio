@@ -11,6 +11,12 @@
 //     }
 //   }
 
+let mainNavLinks = document.querySelectorAll("#myheader ul li a");
+let mainSections = document.querySelectorAll("#fixedPix", "#aboutContainer", "#portfolioSection", "#resumeSection", "#contactMe");
+let mainBody = document.querySelector('.body')
+let lastId;
+let cur = [];
+
 function preloader() {
   let pageloader = document.querySelector('.pageloader')
   pageloader.style.visibility = 'hidden'
@@ -36,5 +42,24 @@ const LottieAnimations = {
     path: 'js/logo_anim.json',
   }),
 }
+
+window.addEventListener("scroll", event => {
+  let fromTop = mainBody.scrollTop;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
 
 
