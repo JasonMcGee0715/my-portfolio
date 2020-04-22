@@ -16,6 +16,8 @@ let mainSections = document.querySelectorAll('.section');
 let mainBody = document.querySelector('.body')
 let fromTop = mainBody.scrollTop;
 let links = mainNavLinks.childNodes
+const hamMenu = document.querySelector(".hamMenu")
+const ul = document.querySelector(".ul")
 
 function preloader() {
   let pageloader = document.querySelector('.pageloader')
@@ -58,6 +60,8 @@ mainBody.addEventListener("scroll", function() {
   });
 });
 
-
-
-
+hamMenu.addEventListener("click", function() {
+  ul.classList.toggle("focusedUserlist")
+  hamMenu.classList.toggle("menu180")
+  console.log("clicked")
+})

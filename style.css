@@ -49,6 +49,13 @@ body {
   top: 0;
   z-index: 999;
 }
+.hamMenu {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  right: 45px;
+  visibility: hidden;
+}
 .header img {
   width: 40px;
   margin-left: 30px;
@@ -65,6 +72,9 @@ body {
   position: absolute;
   margin: 0;
   right: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 .header li {
   float: right;
@@ -541,10 +551,209 @@ body {
 .socialContainer img {
   width: 50px;
   padding: 20px;
+  filter: grayscale(.5);
+  transition: all .5s ease-out;
+  cursor: pointer;
+}
+.socialContainer img:hover {
+  filter: grayscale(0);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
+  body {
+    background-color: wheat;
+  }
+  .container {
+    width: 480px;
+    min-width: 480px;
+    margin:0 auto;
+  }
+  .header {
+    width: 480px;
+    min-width: 480px;
+  }
+  .hamMenu {
+    visibility: visible;
+    z-index: 999;
+    cursor: pointer;
+    transform: rotateZ(360deg);
+    transition: all .5s ease-out;
+  }
+  .hamMenu.menu180 {
+    transform: rotateZ(90deg)
+  }
+  /* .hamMenu:focus~ul li {
+    transform: translateY(0px);
+  } */
+  .ul.focusedUserlist li {
+    transform: translateY(0px);
+  }
+  .header ul {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    z-index: 5;
+  }
+  .header li  {
+    background-color: rgba(255, 255, 255, .8);
+    /* border-radius: 20px; */
+    color: lightgray;
+    transform: translateY(-200px);
+    transition: all ease-out .5s;
+  }
+
+
+
+
+  #aboutContainer {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0px;
+    
+  }
+  .profilePic img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+  }
+  .aboutMeSummary {
+    width: 275px;
+    margin: 0 auto;
+    font-family: 'Special Elite', cursive;
+    line-height: 20px;
+    transform: scale(1);
+    transition: transform ease-out 0.5s;
+  }
+  .aboutMeSummary:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .portfolioSection p {
+    margin: 0;
+    width: 480px;
+    height: auto;
+  }
+  .portfolioContainer {
+    width: inherit;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .portfolioContainer img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    transition: all 0.25s;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0);
+  }
+  .portfolioContainer img:hover {
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    width: 480px;
+    min-width: 480px;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 /* @media screen and (max-width: 600px) { */
