@@ -9,7 +9,6 @@
     />
     <link rel="stylesheet" href="/fonts/Kano/Kano regular.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -22,7 +21,10 @@
           <img src="/images/logo_black.png" alt="Personal Logo" />
         </div>
         <p>Jason McGee</p>
-        <ul>
+        <div class="hamMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 20"><path d="M15,40A10,10,0,1,0,25,50,10,10,0,0,0,15,40Zm70,0A10,10,0,1,0,95,50,10,10,0,0,0,85,40ZM50,40A10,10,0,1,0,60,50,10,10,0,0,0,50,40Z" transform="translate(-5 -40)"/></svg>
+        </div>
+        <ul class="ul">
           <li><a href="">Contact</a></li>
           <li><a href="">Resume</a></li>
           <li><a href="#portfolioSection">Portfolio</a></li>
@@ -194,7 +196,7 @@
         <div class="footer">
           <div class="socialContainer">
             <img onclick="window.location.href = 'https://www.linkedin.com/in/jasonmcgee0715/';" src="/images/iconfinder_1_Linkedin_unofficial_colored_svg_5296501.svg" alt="">
-            <img src="/images/iconfinder_Colored_Facebook3_svg_5365678.svg" alt="">
+            <img onclick="window.location.href = 'https://www.facebook.com/woolie.d.poolie';" src="/images/iconfinder_Colored_Facebook3_svg_5365678.svg" alt="">
             <img src="/images/iconfinder_1_Twitter3_colored_svg_5296516.svg" alt="">
             <img src="/images/iconfinder_1_Pinterest_colored_svg_5296503.svg" alt="">
           </div>
@@ -202,5 +204,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
