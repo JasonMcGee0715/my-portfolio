@@ -118,12 +118,12 @@ body {
   display: none;
 }
 
-#fixedPic,
+/* #fixedPic,
 #aboutContainer,
 #portfolioSection,
 #contactMe {
   scroll-snap-align: start;
-}
+} */
 
 #fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
@@ -711,7 +711,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0px 50px 0px;
+    margin: 40px 0px 60px 0px;
   }
   .contactContainer {
     width: 350px;
@@ -723,12 +723,17 @@ body {
     align-self: center;
     border-radius: 3px;
     box-shadow: rgb(207, 207, 207) 2px 2px 50px 8px;
+    overflow: hidden;
   }
   .nameEmail {
     flex-direction: column;
   }
   .contactFormContainer {
-
+    width: 300px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 
