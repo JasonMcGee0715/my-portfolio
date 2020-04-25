@@ -602,6 +602,7 @@ body {
     transition: all ease-out 0.5s;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -617,6 +618,11 @@ body {
 
 
 >>>>>>> master
+=======
+  #fixedPic {
+    background-position: -2% 50%;
+  }
+>>>>>>> ac5cc67a3c9619f7b0f785e72807c98c2ffe3803
   #aboutContainer {
     height: auto;
     padding-bottom: 50px;
@@ -675,6 +681,7 @@ body {
 
   #resumeSection {
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   .position .line {
@@ -731,7 +738,40 @@ body {
 
 
   
+=======
+>>>>>>> ac5cc67a3c9619f7b0f785e72807c98c2ffe3803
   
+  .position .line {
+    left: 12.5px;
+    grid-column: 1;
+  }
+  .containerTimeline .indicator {
+    grid-column: 1;
+  }
+  .containerTimeline .content .position.right,
+  .containerTimeline .content .position.left {
+    position: relative;
+    grid-row: auto;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+  }
+  .containerTimeline .content .position.left .date,
+  .containerTimeline .content .position.right .date,
+  .containerTimeline .content .position.left .description-container,
+  .containerTimeline .content .position.right .description-container {
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: flex-end;
+  }
+  .containerTimeline .content .position.left .date,
+  .containerTimeline .content .position.right .date {
+    justify-content: flex-start;
+  }
+  .containerTimeline .content .position.left .description::after, 
+  .containerTimeline .content .position.right .description::after {
+    border-width: 9px 11px 9px 0px;
+    left: -11px;
+  }
   .contactMe {
     height: auto;
   }
@@ -765,6 +805,7 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+<<<<<<< HEAD
 
 
 
@@ -778,6 +819,8 @@ body {
 
 
 >>>>>>> master
+=======
+>>>>>>> ac5cc67a3c9619f7b0f785e72807c98c2ffe3803
   .footer {
     width: 480px;
     min-width: 480px;
@@ -791,6 +834,7 @@ body {
     transform: translateX(20px);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Media queries - Responsive timeline on screens less than 600px wide */
 /* @media screen and (max-width: 600px) { */
@@ -826,3 +870,5 @@ body {
 =======
 
 >>>>>>> master
+=======
+>>>>>>> ac5cc67a3c9619f7b0f785e72807c98c2ffe3803
