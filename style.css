@@ -118,12 +118,12 @@ body {
   display: none;
 }
 
-#fixedPic,
+/* #fixedPic,
 #aboutContainer,
 #portfolioSection,
 #contactMe {
   scroll-snap-align: start;
-}
+} */
 
 #fixedPic {
   background-image: url(images/sunrise-handstand.jpg);
@@ -135,6 +135,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1200px;
+  background-position: 50% 50%;
 }
 
 #aboutContainer {
@@ -483,14 +484,6 @@ body {
   flex-direction: column;
   font-family: 'Special Elite', cursive;
 }
-/* .contactMe p {
-  text-align: center;
-  font-family: 'Special Elite', cursive;
-  margin: 0;
-  padding-top: 0px;
-  padding-bottom: 80px;
-  font-size: 40px;
-} */
 .headerContact {
   height: 100px;
   width: 100%;
@@ -608,6 +601,22 @@ body {
     transform: translateY(-200px);
     transition: all ease-out 0.5s;
   }
+<<<<<<< HEAD
+=======
+
+
+
+
+  #fixedPic {
+    background-position: -2% 50%;
+  }
+
+
+
+
+
+
+>>>>>>> master
   #aboutContainer {
     height: auto;
     padding-bottom: 50px;
@@ -667,6 +676,7 @@ body {
   #resumeSection {
   }
 
+<<<<<<< HEAD
   .position .line {
     left: 12.5px;
     grid-column: 1;
@@ -698,6 +708,76 @@ body {
     border-width: 9px 11px 9px 0px;
     left: -11px;
   }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  .contactMe {
+    height: auto;
+  }
+  .flex-wrapper {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px 60px 0px;
+  }
+  .contactContainer {
+    width: 350px;
+    height: auto;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    align-self: center;
+    border-radius: 3px;
+    box-shadow: rgb(207, 207, 207) 2px 2px 50px 8px;
+    overflow: hidden;
+  }
+  .nameEmail {
+    flex-direction: column;
+  }
+  .contactFormContainer {
+    width: 300px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> master
   .footer {
     width: 480px;
     min-width: 480px;
@@ -711,6 +791,7 @@ body {
     transform: translateX(20px);
   }
 }
+<<<<<<< HEAD
 /* Media queries - Responsive timeline on screens less than 600px wide */
 /* @media screen and (max-width: 600px) { */
 /* Place the timelime to the left */
@@ -742,3 +823,6 @@ body {
 /* .right {
     left: 0%;
     } */
+=======
+
+>>>>>>> master
