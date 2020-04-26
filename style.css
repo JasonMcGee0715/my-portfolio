@@ -554,7 +554,7 @@ body {
 
 @media (max-width: 1000px) {
   body {
-    background-color: wheat;
+    background-color: rgb(65, 122, 168);
   }
   .container {
     width: 480px;
