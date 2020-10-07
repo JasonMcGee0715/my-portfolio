@@ -19,7 +19,7 @@ body {
   transition: all 0.1s linear 0.5s;
 }
 .loader {
-  width: 25%;
+  width: 40%;
   height: auto;
 }
 .container {

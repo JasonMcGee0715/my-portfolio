@@ -60,6 +60,10 @@ mainBody.addEventListener("scroll", function() {
   });
 });
 
+
+//Below is some code stolen to hide the navbar when you scroll down and makes it appear again when you scroll up.  This also uses a CSS class call scroll-down the sets the navbar height to 0.
+
+
 hamMenu.addEventListener("click", function() {
   ul.classList.toggle("focusedUserlist")
   hamMenu.classList.toggle("menu180")
