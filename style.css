@@ -135,7 +135,7 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1200px;
-  background-position: 50% 50%;
+  /* background-position: 50% 50%; */
 }
 
 #aboutContainer {
@@ -551,6 +551,16 @@ body {
 .socialContainer img:hover {
   filter: grayscale(0);
 }
+
+
+
+/* ============================================================================================================================= */
+
+
+
+
+
+
 
 @media (max-width: 1000px) {
   body {
