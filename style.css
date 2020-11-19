@@ -130,12 +130,12 @@ body {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   border-radius: 1.5px;
   margin: auto;
   width: 100%;
   max-width: 1200px;
-  /* background-position: 50% 50%; */
+  background-position: 30% 50%;
 }
 
 #aboutContainer {
@@ -247,15 +247,19 @@ body {
 }
 .portfolioContainer {
   width: 700px;
-  height: 580px;
+  height: auto;
   margin-top: 50px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 3fr;
   align-items: center;
   justify-items: center;
   grid-gap: 10px;
+  row-gap: 50px;
   cursor: pointer;
+}
+.portfolioContainer h3 {
+  text-align: center;
 }
 .portfolioContainer img {
   width: 300px;
