@@ -28,9 +28,9 @@ function preloader() {
 }
 window.addEventListener('load', function(e) {
     setTimeout(preloader, 2000)
-    setTimeout(function() {
-        // let document.querySelector('.')
-    }, 500)
+    // setTimeout(function() {
+    //     // let document.querySelector('.')
+    // }, 500)
 })
 
 const LottieAnimations = {
