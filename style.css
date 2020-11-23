@@ -592,13 +592,12 @@ body {
   }
   .hamMenu.menu180 {
     transform: rotateZ(90deg);
-    top: -5px
   }
   /* .hamMenu:focus~ul li {
     transform: translateY(0px);
   } */
   .ul.focusedUserlist li {
-    transform: translateY(0px);
+    transform: translateY(-3px);
   }
   .header ul {
     display: flex;
