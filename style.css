@@ -589,10 +589,10 @@ body {
     cursor: pointer;
     transform: rotateZ(360deg);
     transition: all .5s ease-out;
-    top: -5px;
   }
   .hamMenu.menu180 {
     transform: rotateZ(90deg);
+    top: -5px
   }
   /* .hamMenu:focus~ul li {
     transform: translateY(0px);
