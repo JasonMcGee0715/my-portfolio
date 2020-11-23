@@ -596,9 +596,11 @@ body {
   /* .hamMenu:focus~ul li {
     transform: translateY(0px);
   } */
+  .ul.focusedUserlist {
+    top:-5px;
+  }
   .ul.focusedUserlist li {
     transform: translateY(0px);
-    top: -5px
   }
   .header ul {
     display: flex;
