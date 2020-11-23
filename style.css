@@ -574,7 +574,7 @@ body {
   .container {
     width: 480px;
     min-width: 480px;
-    /* margin:0 auto; */
+    margin:0 auto;
   }
   .header {
     width: 480px;
@@ -589,9 +589,10 @@ body {
     cursor: pointer;
     transform: rotateZ(360deg);
     transition: all .5s ease-out;
+    top: -5px;
   }
   .hamMenu.menu180 {
-    transform: rotateZ(90deg)
+    transform: rotateZ(90deg);
   }
   /* .hamMenu:focus~ul li {
     transform: translateY(0px);
