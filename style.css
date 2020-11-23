@@ -569,11 +569,12 @@ body {
 @media (max-width: 1000px) {
   body {
     background-color: rgb(65, 122, 168);
+    width:480px;
   }
   .container {
     width: 480px;
     min-width: 480px;
-    margin:0 auto;
+    /* margin:0 auto; */
   }
   .header {
     width: 480px;
