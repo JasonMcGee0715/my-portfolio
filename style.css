@@ -642,6 +642,7 @@ body {
   .aboutSection {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: auto;
     padding: 0px;
@@ -656,12 +657,15 @@ body {
     padding-top: 50px;
   }
   .aboutMeSummary {
-    width: 275px;
-    margin: 0 auto;
+    width: 325px;
+    margin: auto;
     font-family: 'Special Elite', cursive;
     line-height: 20px;
     transform: scale(1);
     transition: transform ease-out 0.5s;
+  }
+  .aboutMeSummary p {
+    width: 200px;
   }
   .aboutMeSummary:hover {
     transform: scale(1.01);
