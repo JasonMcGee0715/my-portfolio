@@ -601,9 +601,9 @@ body {
   /* .hamMenu:focus~ul li {
     transform: translateY(0px);
   } */
-  .ul.focusedUserlist {
+  /* .ul.focusedUserlist {
     top:-5px;
-  }
+  } */
   .ul.focusedUserlist li {
     transform: translateY(0px);
   }
@@ -645,7 +645,6 @@ body {
     justify-content: center;
     align-items: center;
     height: auto;
-    padding: 0px;
     
   }
   .profilePic img {
@@ -657,15 +656,15 @@ body {
     padding-top: 50px;
   }
   .aboutMeSummary {
-    width: 325px;
-    margin: auto;
+    width: 300px;
+    /* margin: 25%; */
     font-family: 'Special Elite', cursive;
-    line-height: 20px;
+    /* line-height: 20px; */
     transform: scale(1);
     transition: transform ease-out 0.5s;
   }
   .aboutMeSummary p {
-    width: 200px;
+    width: 15rem;
   }
   .aboutMeSummary:hover {
     transform: scale(1.01);
