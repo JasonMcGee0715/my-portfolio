@@ -1,6 +1,12 @@
 html {
   overflow: hidden;
 }
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
 
 body {
   margin: 0;
@@ -109,7 +115,7 @@ body {
 
 .body {
   height: 100vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
@@ -569,16 +575,15 @@ body {
 @media (max-width: 1000px) {
   body {
     background-color: rgb(65, 122, 168);
-    /* width:480px; */
   }
   .container {
-    width: 100%;
-    min-width: 480px;
+    width: 480px;
+    /* min-width: 480px; */
     margin:0 auto;
   }
   .header {
     width: 100%;
-    min-width: 480px;
+    /* min-width: 480px; */
   }
   /* .body {
     width:480px
@@ -621,7 +626,7 @@ body {
 
   #fixedPic {
     background-image: url('/images/handstand-3570722_1280.png');
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: contain;
   }
 
@@ -677,7 +682,7 @@ body {
 
   .portfolioSection p {
     margin: 0;
-    width: 480px;
+    width: 100%;
     height: auto;
   }
   .portfolioContainer {
