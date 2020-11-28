@@ -577,13 +577,13 @@ body {
     background-color: rgb(65, 122, 168);
   }
   .container {
-    width: 480px;
-    min-width: 480px;
+    width: 375px;
+    min-width: 375px;
     margin:0 auto;
   }
   .header {
-    width: 480px;
-    min-width: 480px;
+    width: 375px;
+    min-width: 375px;
   }
   /* .body {
     width:480px
@@ -804,7 +804,7 @@ body {
   }
   .footer {
     width: 100%;
-    min-width: 480px;
+    min-width: 375px;
   }
 }
 
