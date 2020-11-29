@@ -605,7 +605,7 @@ body {
     top:-5px;
   } */
   .ul.focusedUserlist li {
-    transform: translateY(0px);
+    transform: translateY(-1px);
   }
   .header ul {
     display: flex;
