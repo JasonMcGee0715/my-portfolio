@@ -584,6 +584,7 @@ body {
   .header {
     width: 375px;
     min-width: 375px;
+    height: 100px;
   }
   /* .body {
     width:480px
@@ -605,7 +606,7 @@ body {
     top:-5px;
   } */
   .ul.focusedUserlist li {
-    transform: translateY(-1px);
+    transform: translateY(0px);
   }
   .header ul {
     display: flex;
