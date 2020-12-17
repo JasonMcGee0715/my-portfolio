@@ -251,6 +251,7 @@ body {
 .portfolioBody {
   display: flex;
   justify-content: center;
+  font-family: 'Special Elite', cursive;
 }
 .portfolioContainer {
   width: 700px;
@@ -294,6 +295,10 @@ body {
 a {
   text-decoration: none;
 }
+a:link, :visited {
+  color: #000000;
+}
+
 
 /* Container around content */
 .containerTimeline {
@@ -324,7 +329,6 @@ a {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-
 .containerTimeline .button:hover {
   background-color: #ff9f55;
   color: #ffffff;
@@ -333,7 +337,6 @@ a {
 .containerTimeline .button:hover svg {
   fill: #ffffff;
 }
-
 .containerTimeline .button::after {
   content: '';
   position: absolute;
@@ -345,11 +348,9 @@ a {
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
   transition: opacity 0.3s ease-in-out;
 }
-
 .containerTimeline .button:hover::after {
   opacity: 1;
 }
-
 .containerTimeline .button svg {
   width: auto;
   height: 12px;
