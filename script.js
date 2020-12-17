@@ -69,3 +69,13 @@ hamMenu.addEventListener("click", function() {
   hamMenu.classList.toggle("menu180")
   console.log("clicked")
 })
+
+
+// Code to make airplane fly away
+
+$('button').click(function() {
+  $(this).toggleClass('clicked');
+  $('button p').text(function(i, text) {
+    return text === "Opening Email" ? "Contact Me" : "Opening Email";
+  });
+});
