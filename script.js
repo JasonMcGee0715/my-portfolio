@@ -27,7 +27,7 @@ function preloader() {
   // document.querySelector('html').style.setProperty('overflow', 'auto')
 }
 window.addEventListener('load', function(e) {
-    setTimeout(preloader, 2000)
+    setTimeout(preloader, 1000)
     // setTimeout(function() {
     //     // let document.querySelector('.')
     // }, 500)
