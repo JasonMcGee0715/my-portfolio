@@ -21,13 +21,13 @@ const ul = document.querySelector(".ul")
 
 function preloader() {
   let pageloader = document.querySelector('.pageloader')
-  pageloader.style.visibility = 'hidden'
+  pageloader.style.visibility = 'hidden';
   pageloader.setAttribute('aria-busy', 'false')
   document.querySelector('.container').classList.add('visible')
   // document.querySelector('html').style.setProperty('overflow', 'auto')
 }
 window.addEventListener('load', function(e) {
-    setTimeout(preloader, 1000)
+    setTimeout(preloader, 2200)
     // setTimeout(function() {
     //     // let document.querySelector('.')
     // }, 500)
